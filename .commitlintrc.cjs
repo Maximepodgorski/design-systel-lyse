@@ -33,7 +33,7 @@ module.exports = {
         'build'          // Build
       ]
     ],
-    'subject-case': [2, 'always', 'lower'],
+    'subject-case': [2, 'always', 'lowercase'],
     'subject-empty': [2, 'never'],
     'subject-full-stop': [2, 'never', '.'],
     'header-max-length': [2, 'always', 72]

@@ -1,0 +1,6 @@
+{
+  "apiUrl": "https://api.linear.app/graphql",
+  "apiKey": "YOUR_LINEAR_API_KEY_HERE",
+  "projectId": "YOUR_PROJECT_ID_HERE",
+  "teamId": "YOUR_TEAM_ID_HERE"
+}

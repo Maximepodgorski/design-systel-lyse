@@ -17,6 +17,18 @@ export default [
           jsx: true,
         },
       },
+      globals: {
+        console: 'readonly',
+        document: 'readonly',
+        window: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': typescript,
@@ -34,6 +46,7 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
+      'no-undef': 'off', // Désactivé car géré par TypeScript
     },
   },
   {
@@ -41,6 +54,18 @@ export default [
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
+      globals: {
+        console: 'readonly',
+        document: 'readonly',
+        window: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+      },
     },
   },
   {
