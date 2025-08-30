@@ -1,0 +1,417 @@
+// Tokens sémantiques de Figma
+// Ce fichier contient les variables avec contexte d'usage spécifique
+// Utilise les variables primitives et sera synchronisé avec Figma
+
+:root {
+  // === THÈME LIGHT ===
+  
+  // === BACKGROUNDS ===
+  // Backgrounds de base
+  --background-base: var(--root-color-base-white);
+  --background-disabled: var(--root-color-gray-200);
+  --background-elevated: var(--root-color-gray-050);
+  --background-selected: var(--root-color-brand-600);
+  
+  // Backgrounds de marque (Brand)
+  --background-brand-bolder-default: var(--root-color-brand-800);
+  --background-brand-bolder-hover: var(--root-color-brand-700);
+  --background-brand-bolder-pressed: var(--root-color-brand-600);
+  --background-brand-faint-default: var(--root-color-brand-050);
+  --background-brand-faint-hover: var(--root-color-brand-100);
+  --background-brand-faint-pressed: var(--root-color-brand-200);
+  --background-brand-lighter-default: var(--root-color-brand-200);
+  --background-brand-lighter-hover: var(--root-color-brand-300);
+  --background-brand-lighter-pressed: var(--root-color-brand-400);
+  --background-brand-medium-default: var(--root-color-brand-400);
+  --background-brand-medium-hover: var(--root-color-brand-500);
+  --background-brand-medium-pressed: var(--root-color-brand-600);
+  --background-brand-moderate-default: var(--root-color-brand-600);
+  --background-brand-moderate-hover: var(--root-color-brand-700);
+  --background-brand-moderate-pressed: var(--root-color-brand-800);
+  --background-brand-strong-default: var(--root-color-brand-900);
+  --background-brand-strong-hover: var(--root-color-brand-800);
+  --background-brand-strong-pressed: var(--root-color-brand-700);
+  
+  // Backgrounds de danger
+  --background-danger-bolder-default: var(--root-color-danger-800);
+  --background-danger-bolder-hover: var(--root-color-danger-700);
+  --background-danger-bolder-pressed: var(--root-color-danger-600);
+  --background-danger-faint-default: var(--root-color-danger-050);
+  --background-danger-faint-hover: var(--root-color-danger-100);
+  --background-danger-faint-pressed: var(--root-color-danger-200);
+  --background-danger-lighter-default: var(--root-color-danger-200);
+  --background-danger-lighter-hover: var(--root-color-danger-300);
+  --background-danger-lighter-pressed: var(--root-color-danger-400);
+  --background-danger-medium-default: var(--root-color-danger-400);
+  --background-danger-medium-hover: var(--root-color-danger-500);
+  --background-danger-medium-pressed: var(--root-color-danger-600);
+  --background-danger-moderate-default: var(--root-color-danger-600);
+  --background-danger-moderate-hover: var(--root-color-danger-700);
+  --background-danger-moderate-pressed: var(--root-color-danger-800);
+  --background-danger-strong-default: var(--root-color-danger-900);
+  --background-danger-strong-hover: var(--root-color-danger-800);
+  --background-danger-strong-pressed: var(--root-color-danger-700);
+  
+  // Backgrounds neutres
+  --background-neutral-bolder-default: var(--root-color-gray-800);
+  --background-neutral-bolder-hover: var(--root-color-gray-700);
+  --background-neutral-bolder-pressed: var(--root-color-gray-600);
+  --background-neutral-faint-default: var(--root-color-gray-050);
+  --background-neutral-faint-hover: var(--root-color-gray-100);
+  --background-neutral-faint-pressed: var(--root-color-gray-200);
+  --background-neutral-lighter-default: var(--root-color-gray-200);
+  --background-neutral-lighter-hover: var(--root-color-gray-300);
+  --background-neutral-lighter-pressed: var(--root-color-gray-400);
+  --background-neutral-medium-default: var(--root-color-gray-400);
+  --background-neutral-medium-hover: var(--root-color-gray-500);
+  --background-neutral-medium-pressed: var(--root-color-gray-600);
+  --background-neutral-moderate-default: var(--root-color-gray-600);
+  --background-neutral-moderate-hover: var(--root-color-gray-700);
+  --background-neutral-moderate-pressed: var(--root-color-gray-800);
+  --background-neutral-strong-default: var(--root-color-gray-900);
+  --background-neutral-strong-hover: var(--root-color-gray-800);
+  --background-neutral-strong-pressed: var(--root-color-gray-700);
+  
+  // Backgrounds de succès
+  --background-success-bolder-default: var(--root-color-success-800);
+  --background-success-bolder-hover: var(--root-color-success-700);
+  --background-success-bolder-pressed: var(--root-color-success-600);
+  --background-success-faint-default: var(--root-color-success-050);
+  --background-success-faint-hover: var(--root-color-success-100);
+  --background-success-faint-pressed: var(--root-color-success-200);
+  --background-success-lighter-default: var(--root-color-success-200);
+  --background-success-lighter-hover: var(--root-color-success-300);
+  --background-success-lighter-pressed: var(--root-color-success-400);
+  --background-success-medium-default: var(--root-color-success-400);
+  --background-success-medium-hover: var(--root-color-success-500);
+  --background-success-medium-pressed: var(--root-color-success-600);
+  --background-success-moderate-default: var(--root-color-success-600);
+  --background-success-moderate-hover: var(--root-color-success-700);
+  --background-success-moderate-pressed: var(--root-color-success-800);
+  --background-success-strong-default: var(--root-color-success-900);
+  --background-success-strong-hover: var(--root-color-success-800);
+  --background-success-strong-pressed: var(--root-color-success-700);
+  
+  // Backgrounds d'avertissement
+  --background-warning-bolder-default: var(--root-color-warning-800);
+  --background-warning-bolder-hover: var(--root-color-warning-700);
+  --background-warning-bolder-pressed: var(--root-color-warning-600);
+  --background-warning-faint-default: var(--root-color-warning-050);
+  --background-warning-faint-hover: var(--root-color-warning-100);
+  --background-warning-faint-pressed: var(--root-color-warning-200);
+  --background-warning-lighter-default: var(--root-color-warning-200);
+  --background-warning-lighter-hover: var(--root-color-warning-300);
+  --background-warning-lighter-pressed: var(--root-color-warning-400);
+  --background-warning-medium-default: var(--root-color-warning-400);
+  --background-warning-medium-hover: var(--root-color-warning-500);
+  --background-warning-medium-pressed: var(--root-color-warning-600);
+  --background-warning-moderate-default: var(--root-color-warning-600);
+  --background-warning-moderate-hover: var(--root-color-warning-700);
+  --background-warning-moderate-pressed: var(--root-color-warning-800);
+  --background-warning-strong-default: var(--root-color-warning-900);
+  --background-warning-strong-hover: var(--root-color-warning-800);
+  --background-warning-strong-pressed: var(--root-color-warning-700);
+  
+  // === BORDURES ===
+  // Bordures de base
+  --border-base: var(--root-color-base-white);
+  --border-default: var(--root-color-gray-300);
+  --border-disabled: var(--root-color-gray-100);
+  --border-divider: var(--root-color-gray-400);
+  --border-selected: var(--root-color-brand-600);
+  
+  // Bordures de marque
+  --border-brand-bolder: var(--root-color-brand-800);
+  --border-brand-lighter: var(--root-color-brand-200);
+  --border-brand-medium: var(--root-color-brand-400);
+  --border-brand-moderate: var(--root-color-brand-600);
+  --border-brand-strong: var(--root-color-brand-900);
+  
+  // Bordures de danger
+  --border-danger-bolder: var(--root-color-danger-800);
+  --border-danger-lighter: var(--root-color-danger-200);
+  --border-danger-medium: var(--root-color-danger-400);
+  --border-danger-moderate: var(--root-color-danger-600);
+  --border-danger-strong: var(--root-color-danger-900);
+  
+  // Bordures neutres
+  --border-neutral-bolder: var(--root-color-gray-800);
+  --border-neutral-lighter: var(--root-color-gray-200);
+  --border-neutral-medium: var(--root-color-gray-400);
+  --border-neutral-moderate: var(--root-color-gray-600);
+  --border-neutral-strong: var(--root-color-gray-900);
+  
+  // Bordures de succès
+  --border-success-bolder: var(--root-color-success-800);
+  --border-success-lighter: var(--root-color-success-200);
+  --border-success-medium: var(--root-color-success-400);
+  --border-success-moderate: var(--root-color-success-600);
+  --border-success-strong: var(--root-color-success-900);
+  
+  // Bordures d'avertissement
+  --border-warning-bolder: var(--root-color-warning-800);
+  --border-warning-lighter: var(--root-color-warning-200);
+  --border-warning-medium: var(--root-color-warning-400);
+  --border-warning-moderate: var(--root-color-warning-600);
+  --border-warning-strong: var(--root-color-warning-900);
+  
+  // === ICÔNES ===
+  // Icônes de base
+  --icon-disabled: var(--root-color-gray-300);
+  --icon-inverse: var(--root-color-base-white);
+  --icon-selected: var(--root-color-brand-600);
+  
+  // Icônes de marque
+  --icon-brand-bolder: var(--root-color-brand-800);
+  --icon-brand-lighter: var(--root-color-brand-200);
+  --icon-brand-medium: var(--root-color-brand-400);
+  --icon-brand-moderate: var(--root-color-brand-600);
+  
+  // Icônes de danger
+  --icon-danger-bolder: var(--root-color-danger-800);
+  --icon-danger-lighter: var(--root-color-danger-200);
+  --icon-danger-medium: var(--root-color-danger-400);
+  --icon-danger-moderate: var(--root-color-danger-600);
+  
+  // Icônes neutres
+  --icon-neutral-bolder: var(--root-color-gray-800);
+  --icon-neutral-lighter: var(--root-color-gray-200);
+  --icon-neutral-medium: var(--root-color-gray-400);
+  --icon-neutral-moderate: var(--root-color-gray-600);
+  
+  // Icônes de succès
+  --icon-success-bolder: var(--root-color-success-800);
+  --icon-success-lighter: var(--root-color-success-200);
+  --icon-success-medium: var(--root-color-success-400);
+  --icon-success-moderate: var(--root-color-success-600);
+  
+  // Icônes d'avertissement
+  --icon-warning-bolder: var(--root-color-warning-800);
+  --icon-warning-lighter: var(--root-color-warning-200);
+  --icon-warning-medium: var(--root-color-warning-400);
+  --icon-warning-moderate: var(--root-color-warning-600);
+  
+  // === LIENS ===
+  // Liens primaires
+  --link-primary-default: var(--root-color-brand-600);
+  --link-primary-hover: var(--root-color-brand-700);
+  --link-primary-pressed: var(--root-color-brand-800);
+  --link-primary-visited: var(--root-color-brand-500);
+  
+  // === OMBRES ===
+  // Ombres de marque
+  --shadow-brand-bolder: var(--root-color-brand-800);
+  --shadow-brand-lighter: var(--root-color-brand-200);
+  --shadow-brand-medium: var(--root-color-brand-400);
+  --shadow-brand-moderate: var(--root-color-brand-600);
+  --shadow-brand-strong: var(--root-color-brand-900);
+  
+  // Ombres de danger
+  --shadow-danger-bolder: var(--root-color-danger-800);
+  --shadow-danger-lighter: var(--root-color-danger-200);
+  --shadow-danger-medium: var(--root-color-danger-400);
+  --shadow-danger-moderate: var(--root-color-danger-600);
+  --shadow-danger-strong: var(--root-color-danger-900);
+  
+  // Ombres inverses
+  --shadow-invese-bolder: var(--root-opacity-inverse-500);
+  --shadow-invese-lighter: var(--root-opacity-inverse-200);
+  --shadow-invese-medium: var(--root-opacity-inverse-300);
+  --shadow-invese-moderate: var(--root-opacity-inverse-400);
+  --shadow-invese-strong: var(--root-opacity-inverse-600);
+  
+  // Ombres neutres
+  --shadow-neutral-bolder: var(--root-opacity-neutral-500);
+  --shadow-neutral-lighter: var(--root-opacity-neutral-200);
+  --shadow-neutral-medium: var(--root-opacity-neutral-300);
+  --shadow-neutral-moderate: var(--root-opacity-neutral-400);
+  --shadow-neutral-strong: var(--root-opacity-neutral-600);
+  
+  // Ombres de succès
+  --shadow-success-bolder: var(--root-color-success-700);
+  --shadow-success-lighter: var(--root-color-success-200);
+  --shadow-success-medium: var(--root-color-success-400);
+  --shadow-success-moderate: var(--root-color-success-500);
+  --shadow-success-strong: var(--root-color-success-900);
+  
+  // Ombres d'avertissement
+  --shadow-warning-bolder: var(--root-color-warning-800);
+  --shadow-warning-lighter: var(--root-color-warning-200);
+  --shadow-warning-medium: var(--root-color-warning-400);
+  --shadow-warning-moderate: var(--root-color-warning-600);
+  --shadow-warning-strong: var(--root-color-warning-900);
+  
+  // === TEXTE ===
+  // Texte de base
+  --text-disabled: var(--root-color-gray-300);
+  --text-inverse: var(--root-color-base-white);
+  --text-selected: var(--root-color-brand-600);
+  --text-base-bolder: var(--root-color-gray-800);
+  --text-base-lighter: var(--root-color-gray-200);
+  --text-base-medium: var(--root-color-gray-400);
+  --text-base-moderate: var(--root-color-gray-600);
+  --text-base-strong: var(--root-color-gray-900);
+  
+  // Texte de marque
+  --text-brand-bolder: var(--root-color-brand-800);
+  --text-brand-lighter: var(--root-color-brand-200);
+  --text-brand-medium: var(--root-color-brand-400);
+  --text-brand-moderate: var(--root-color-brand-600);
+  
+  // Texte de danger
+  --text-danger-bolder: var(--root-color-danger-800);
+  --text-danger-lighter: var(--root-color-danger-200);
+  --text-danger-medium: var(--root-color-danger-400);
+  --text-danger-moderate: var(--root-color-danger-600);
+  
+  // Texte de succès
+  --text-success-bolder: var(--root-color-success-800);
+  --text-success-lighter: var(--root-color-success-200);
+  --text-success-medium: var(--root-color-success-400);
+  --text-success-moderate: var(--root-color-success-600);
+  
+  // Texte d'avertissement
+  --text-warning-bolder: var(--root-color-warning-800);
+  --text-warning-lighter: var(--root-color-warning-200);
+  --text-warning-medium: var(--root-color-warning-400);
+  --text-warning-moderate: var(--root-color-warning-600);
+  
+  // === TOKENS SÉMANTIQUES DE NIVEAU 2 ===
+  // Variables avec alias sémantiques pour les valeurs primitives
+  
+  // === TYPOGRAPHIE SÉMANTIQUE ===
+  // Familles de polices
+  --font-family-content: var(--root-font-family-secondary);
+  --font-family-heading: var(--root-font-family-primary);
+  
+  // Espacement des lettres
+  --font-letter-spacing-heading: var(--root-font-letter-spacing-sm);
+  --font-letter-spacing-content: var(--root-font-letter-spacing-md);
+  
+  // Hauteurs de ligne
+  --font-line-height-content-caption: var(--root-font-line-height-xs);
+  --font-line-height-content-note: var(--root-font-line-height-sm);
+  --font-line-height-content-body: var(--root-font-line-height-md);
+  --font-line-height-content-highlight: var(--root-font-line-height-lg);
+  --font-line-height-content-feature: var(--root-font-line-height-xl);
+  --font-line-height-heading-small: var(--root-font-line-height-xl);
+  --font-line-height-heading-medium: var(--root-font-line-height-2xl);
+  --font-line-height-heading-large: var(--root-font-line-height-3xl);
+  --font-line-height-heading-display: var(--root-font-line-height-4xl);
+  
+  // Tailles de police
+  --font-size-content-caption: var(--root-font-size-xs);
+  --font-size-content-note: var(--root-font-size-sm);
+  --font-size-content-body: var(--root-font-size-md);
+  --font-size-content-highlight: var(--root-font-size-lg);
+  --font-size-content-feature: var(--root-font-size-xl);
+  --font-size-heading-small: var(--root-font-size-xl);
+  --font-size-heading-medium: var(--root-font-size-2xl);
+  --font-size-heading-large: var(--root-font-size-3xl);
+  --font-size-heading-display: var(--root-font-size-4xl);
+  
+  // Poids des polices
+  --font-weight-regular: var(--root-font-weight-400);
+  --font-weight-accent: var(--root-font-weight-500);
+  --font-weight-emphasis: var(--root-font-weight-600);
+  --font-weight-bold: var(--root-font-weight-700);
+  
+  // === SYSTÈME DE GRID ===
+  --grid-column: var(--root-column-lg);
+  --grid-gutter: var(--root-space-7);
+  --grid-margin: var(--root-space-7);
+  
+  // === LAYOUT ===
+  // Bordures
+  --layout-border-none: var(--root-border-widht-0);
+  --layout-border-thin: var(--root-border-widht-1);
+  --layout-border-thick: var(--root-border-widht-2);
+  --layout-border-thicker: var(--root-border-widht-4);
+  
+  // Espacements (gaps)
+  --layout-gap-none: var(--root-space-0);
+  --layout-gap-xs: var(--root-space-1);
+  --layout-gap-sm: var(--root-space-2);
+  --layout-gap-md: var(--root-space-4);
+  --layout-gap-lg: var(--root-space-5);
+  --layout-gap-xl: var(--root-space-6);
+  --layout-gap-2xl: var(--root-space-7);
+  --layout-gap-3xl: var(--root-space-8);
+  --layout-gap-4xl: var(--root-space-9);
+  
+  // Paddings
+  --layout-padding-none: var(--root-space-0);
+  --layout-padding-2xs: var(--root-space-1);
+  --layout-padding-xs: var(--root-space-2);
+  --layout-padding-sm: var(--root-space-3);
+  --layout-padding-md: var(--root-space-4);
+  --layout-padding-lg: var(--root-space-5);
+  --layout-padding-xl: var(--root-space-6);
+  --layout-padding-2xl: var(--root-space-7);
+  --layout-padding-3xl: var(--root-space-8);
+  --layout-padding-4xl: var(--root-space-9);
+  --layout-padding-5xl: var(--root-space-12);
+  --layout-padding-6xl: var(--root-space-15);
+  
+  // Rayons de bordure
+  --layout-radius-xs: var(--root-radius-1);
+  --layout-radius-sm: var(--root-radius-2);
+  --layout-radius-md: var(--root-radius-3);
+  --layout-radius-lg: var(--root-radius-4);
+  --layout-radius-xl: var(--root-radius-5);
+  --layout-radius-2xl: var(--root-radius-6);
+  --layout-radius-3xl: var(--root-radius-7);
+  --layout-radius-full: var(--root-radius-full);
+  
+  // Tailles
+  --layout-size-2xs: var(--root-size-4);
+  --layout-size-xs: var(--root-size-5);
+  --layout-size-base: var(--root-size-6);
+  --layout-size-sm: var(--root-size-6);
+  --layout-size-md: var(--root-size-7);
+  --layout-size-lg: var(--root-size-8);
+  --layout-size-xl: var(--root-size-9);
+  --layout-size-2xl: var(--root-size-10);
+  --layout-size-3xl: var(--root-size-11);
+  
+  // === OMBRES ET OPACITÉS ===
+  --opacity-disabled: var(--root-opacity-4);
+  
+  // Ombres avec flou négatif
+  --shadow-blur-negative-2xl: var(--root-negative-6);
+  --shadow-blur-negative-xl: var(--root-negative-5);
+  --shadow-blur-negative-lg: var(--root-negative-3);
+  --shadow-blur-negative-md: var(--root-negative-2);
+  --shadow-blur-negative-sm: var(--root-negative-1);
+  
+  // Ombres avec flou positif
+  --shadow-blur-positive-none: var(--root-positive-0);
+  --shadow-blur-positive-sm: var(--root-positive-1);
+  --shadow-blur-positive-md: var(--root-positive-2);
+  --shadow-blur-positive-lg: var(--root-positive-3);
+  --shadow-blur-positive-xl: var(--root-positive-5);
+  --shadow-blur-positive-2xl: var(--root-positive-7);
+  --shadow-blur-positive-3xl: var(--root-positive-10);
+  --shadow-blur-positive-4xl: var(--root-positive-11);
+  --shadow-blur-positive-5xl: var(--root-positive-12);
+  
+  // Ombres avec position négative
+  --shadow-position-negative-3xl: var(--root-negative-6);
+  --shadow-position-negative-2xl: var(--root-negative-5);
+  --shadow-position-negative-xl: var(--root-negative-4);
+  --shadow-position-negative-lg: var(--root-negative-3);
+  --shadow-position-negative-md: var(--root-negative-2);
+  --shadow-position-negative-sm: var(--root-negative-1);
+  
+  // Ombres avec position positive
+  --shadow-position-positive-none: var(--root-positive-0);
+  --shadow-position-positive-sm: var(--root-positive-1);
+  --shadow-position-positive-md: var(--root-positive-2);
+  --shadow-position-positive-lg: var(--root-positive-3);
+  --shadow-position-positive-xl: var(--root-positive-4);
+  --shadow-position-positive-2xl: var(--root-positive-5);
+  --shadow-position-positive-3xl: var(--root-positive-7);
+  --shadow-position-positive-4xl: var(--root-positive-9);
+  --shadow-position-positive-5xl: var(--root-positive-10);
+  --shadow-position-positive-6xl: var(--root-positive-11);
+}

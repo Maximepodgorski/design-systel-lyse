@@ -1,0 +1,150 @@
+# Configuration Linear pour le projet Design System Figma
+# https://linear.app/docs/cli/configuration
+
+# Configuration du projet
+project:
+  name: "Design System Figma"
+  key: "DSF"
+  description: "Système de design React synchronisé avec Figma via MCP"
+
+# Configuration des équipes
+teams:
+  - name: "Design System"
+    key: "DS"
+    description: "Équipe dédiée au design system"
+    members:
+      - "maxime@example.com"
+
+# Configuration des cycles
+cycles:
+  - name: "Sprint 1"
+    startDate: "2025-01-20"
+    endDate: "2025-02-02"
+    description: "Premier sprint de développement"
+
+# Configuration des labels
+labels:
+  - name: "Figma Integration"
+    color: "#6366f1"
+    description: "Tâches liées à l'intégration Figma MCP"
+  
+  - name: "Component Development"
+    color: "#10b981"
+    description: "Développement de nouveaux composants"
+  
+  - name: "Design System"
+    color: "#f59e0b"
+    description: "Tâches liées au design system"
+  
+  - name: "Documentation"
+    color: "#8b5cf6"
+    description: "Documentation et guides"
+  
+  - name: "Bug Fix"
+    color: "#ef4444"
+    description: "Corrections de bugs"
+  
+  - name: "Enhancement"
+    color: "#06b6d4"
+    description: "Améliorations et optimisations"
+
+# Configuration des états
+states:
+  - name: "Backlog"
+    type: "backlog"
+    color: "#6b7280"
+  
+  - name: "Ready"
+    type: "unstarted"
+    color: "#3b82f6"
+  
+  - name: "In Progress"
+    type: "started"
+    color: "#f59e0b"
+  
+  - name: "Review"
+    type: "started"
+    color: "#8b5cf6"
+  
+  - name: "Done"
+    type: "completed"
+    color: "#10b981"
+
+# Configuration des priorités
+priorities:
+  - name: "No priority"
+    value: 0
+    color: "#6b7280"
+  
+  - name: "Low"
+    value: 1
+    color: "#3b82f6"
+  
+  - name: "Medium"
+    value: 2
+    color: "#f59e0b"
+  
+  - name: "High"
+    value: 3
+    color: "#ef4444"
+  
+  - name: "Urgent"
+    value: 4
+    color: "#dc2626"
+
+# Configuration des templates
+templates:
+  - name: "New Component"
+    description: "Template pour créer un nouveau composant"
+    template: |
+      ## Objectif
+      Créer un nouveau composant pour le design system
+      
+      ## Contexte
+      [Décrire le contexte et la raison de ce composant]
+      
+      ## Spécifications
+      - [ ] Analyser le design Figma
+      - [ ] Créer le composant React
+      - [ ] Implémenter les styles SCSS
+      - [ ] Utiliser les variables sémantiques
+      - [ ] Tester le composant
+      - [ ] Documenter le composant
+      
+      ## Critères d'acceptation
+      - [ ] Le composant respecte le design Figma
+      - [ ] Le composant utilise les variables sémantiques
+      - [ ] Le composant est responsive
+      - [ ] Le composant est documenté
+      
+      ## Estimation
+      [Estimer le temps nécessaire]
+      
+      ## Labels
+      Component Development, Design System
+  
+  - name: "Figma Integration"
+    description: "Template pour l'intégration Figma MCP"
+    template: |
+      ## Objectif
+      Intégrer le composant avec Figma via MCP
+      
+      ## Contexte
+      [Décrire le composant à synchroniser]
+      
+      ## Spécifications
+      - [ ] Récupérer les variables Figma
+      - [ ] Synchroniser les styles
+      - [ ] Vérifier la cohérence
+      - [ ] Tester l'intégration
+      
+      ## Critères d'acceptation
+      - [ ] Les variables sont synchronisées
+      - [ ] Le composant est cohérent avec Figma
+      - [ ] L'intégration fonctionne correctement
+      
+      ## Estimation
+      [Estimer le temps nécessaire]
+      
+      ## Labels
+      Figma Integration, Design System

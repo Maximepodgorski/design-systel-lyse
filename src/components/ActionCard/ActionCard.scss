@@ -1,0 +1,98 @@
+// Styles du composant ActionCard utilisant les variables sémantiques Figma
+@import '../../styles/main.scss';
+
+.lyse-action-card {
+  // === STYLES DE BASE ===
+  background-color: var(--background-neutral-faint-default);
+  border: 1px solid var(--border-default);
+  border-radius: var(--layout-radius-xl);
+  padding: var(--layout-padding-lg);
+  width: 100%;
+  max-width: 420px;
+  
+  // === CONTENT LAYOUT ===
+  &__content {
+    display: flex;
+    gap: var(--layout-gap-lg);
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  // === TEXT SECTION ===
+  &__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--layout-gap-xs);
+  }
+  
+  &__title {
+    font-family: var(--font-family-content);
+    font-size: var(--font-size-content-note);
+    font-weight: var(--font-weight-accent);
+    line-height: var(--font-line-height-content-note);
+    color: var(--text-base-bolder);
+    margin: 0;
+    padding: 0;
+  }
+  
+  &__description {
+    font-family: var(--font-family-content);
+    font-size: var(--font-size-content-note);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-line-height-content-note);
+    color: var(--text-base-moderate);
+    margin: 0;
+    padding: 0;
+  }
+  
+  // === ACTION SECTION ===
+  &__action {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // === RESPONSIVE ===
+  @media (max-width: 768px) {
+    padding: var(--layout-padding-md);
+    
+    &__content {
+      flex-direction: column;
+      gap: var(--layout-gap-md);
+      align-items: stretch;
+    }
+    
+    &__action {
+      align-self: stretch;
+      
+      .lyse-button {
+        width: 100%;
+      }
+    }
+  }
+  
+  // === HOVER STATE ===
+  &:hover {
+    border-color: var(--border-neutral-medium);
+    box-shadow: 0 1px 2px 0px rgba(28, 28, 28, 0.05);
+  }
+  
+  // === FOCUS STATE ===
+  &:focus-within {
+    outline: 2px solid var(--border-selected);
+    outline-offset: 2px;
+  }
+  
+  // === DISABLED STATE ===
+  &--disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    
+    &:hover {
+      border-color: var(--border-default);
+      box-shadow: none;
+    }
+  }
+}

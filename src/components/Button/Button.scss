@@ -1,0 +1,281 @@
+// Styles du composant Button utilisant les variables sémantiques Figma
+@import '../../styles/main.scss';
+
+.lyse-button {
+  // === STYLES DE BASE ===
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--layout-gap-xs);
+  border: none;
+  border-radius: var(--layout-radius-lg);
+  font-family: var(--font-family-content);
+  font-weight: var(--font-weight-accent);
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  
+  // Focus state
+  &:focus-visible {
+    outline: 2px solid var(--border-selected);
+    outline-offset: 2px;
+  }
+  
+  // Disabled state
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  // Full width
+  &--full-width {
+    width: 100%;
+  }
+  
+  // === VARIANTS ===
+  
+  // Primary variant
+  &--primary {
+    background-color: var(--background-neutral-strong-default);
+    color: var(--text-inverse);
+    
+    &:hover:not(:disabled) {
+      background-color: var(--background-neutral-strong-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    &:active:not(:disabled) {
+      background-color: var(--background-neutral-strong-pressed);
+      transform: translateY(0);
+    }
+  }
+  
+  // Secondary variant
+  &--secondary {
+    background-color: var(--background-neutral-faint-default);
+    color: var(--text-base-strong);
+    border: 1px solid var(--border-default);
+    
+    &:hover:not(:disabled) {
+      background-color: var(--background-neutral-faint-hover);
+      border-color: var(--border-neutral-medium);
+    }
+    
+    &:active:not(:disabled) {
+      background-color: var(--background-neutral-faint-pressed);
+    }
+  }
+  
+  // Danger variant
+  &--danger {
+    background-color: var(--background-danger-moderate-default);
+    color: var(--text-inverse);
+    
+    &:hover:not(:disabled) {
+      background-color: var(--background-danger-moderate-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    &:active:not(:disabled) {
+      background-color: var(--background-danger-moderate-pressed);
+      transform: translateY(0);
+    }
+  }
+  
+  // Success variant
+  &--success {
+    background-color: var(--background-success-moderate-default);
+    color: var(--text-inverse);
+    
+    &:hover:not(:disabled) {
+      background-color: var(--background-success-moderate-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    &:active:not(:disabled) {
+      background-color: var(--background-success-moderate-pressed);
+      transform: translateY(0);
+    }
+  }
+  
+  // Warning variant
+  &--warning {
+    background-color: var(--background-warning-moderate-default);
+    color: var(--text-inverse);
+    
+    &:hover:not(:disabled) {
+      background-color: var(--background-warning-moderate-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    &:active:not(:disabled) {
+      background-color: var(--background-warning-moderate-pressed);
+      transform: translateY(0);
+    }
+  }
+  
+  // Neutral variant
+  &--neutral {
+    background-color: var(--background-neutral-faint-default);
+    color: var(--text-base-strong);
+    border: 1px solid var(--border-default);
+    
+    &:hover:not(:disabled) {
+      background-color: var(--background-neutral-faint-hover);
+      border-color: var(--border-neutral-medium);
+    }
+    
+    &:active:not(:disabled) {
+      background-color: var(--background-neutral-faint-pressed);
+    }
+  }
+  
+  // === SIZES ===
+  
+  // Extra small size
+  &--xs {
+    padding: var(--layout-padding-xs) var(--layout-padding-sm);
+    font-size: var(--font-size-content-note);
+    line-height: var(--font-line-height-content-note);
+    min-height: var(--layout-size-xs);
+    border-radius: var(--layout-radius-sm);
+  }
+  
+  // Small size
+  &--sm {
+    padding: var(--layout-padding-sm) var(--layout-padding-md);
+    font-size: var(--font-size-content-body);
+    line-height: var(--font-line-height-content-body);
+    min-height: var(--layout-size-sm);
+    border-radius: var(--layout-radius-md);
+  }
+  
+  // Medium size (default)
+  &--md {
+    padding: var(--layout-padding-md) var(--layout-padding-lg);
+    font-size: var(--font-size-content-body);
+    line-height: var(--font-line-height-content-body);
+    min-height: var(--layout-size-base);
+    border-radius: var(--layout-radius-lg);
+  }
+  
+  // Large size
+  &--lg {
+    padding: var(--layout-padding-lg) var(--layout-padding-xl);
+    font-size: var(--font-size-content-highlight);
+    line-height: var(--font-line-height-content-highlight);
+    min-height: var(--layout-size-lg);
+    border-radius: var(--layout-radius-xl);
+  }
+  
+  // Extra large size
+  &--xl {
+    padding: var(--layout-padding-xl) var(--layout-padding-2xl);
+    font-size: var(--font-size-content-feature);
+    line-height: var(--font-line-height-content-feature);
+    min-height: var(--layout-size-xl);
+    border-radius: var(--layout-radius-2xl);
+  }
+  
+  // === STATES ===
+  
+  // Hover state
+  &--hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  // Pressed state
+  &--pressed {
+    transform: translateY(0);
+  }
+  
+  // Disabled state
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  
+  // === ICONS ===
+  
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    // Icon sizes based on button size
+    .lyse-button--xs & {
+      width: var(--layout-size-xs);
+      height: var(--layout-size-xs);
+    }
+    
+    .lyse-button--sm & {
+      width: var(--layout-size-sm);
+      height: var(--layout-size-sm);
+    }
+    
+    .lyse-button--md & {
+      width: var(--layout-size-base);
+      height: var(--layout-size-base);
+    }
+    
+    .lyse-button--lg & {
+      width: var(--layout-size-lg);
+      height: var(--layout-size-lg);
+    }
+    
+    .lyse-button--xl & {
+      width: var(--layout-size-xl);
+      height: var(--layout-size-xl);
+    }
+    
+    // Icon positioning
+    &--left {
+      margin-right: var(--layout-gap-xs);
+    }
+    
+    &--right {
+      margin-left: var(--layout-gap-xs);
+    }
+  }
+  
+  // === CONTENT ===
+  
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  
+  // === RESPONSIVE ===
+  
+  @media (max-width: 768px) {
+    &--xl {
+      padding: var(--layout-padding-lg) var(--layout-padding-xl);
+      font-size: var(--font-size-content-highlight);
+      line-height: var(--font-line-height-content-highlight);
+      min-height: var(--layout-size-lg);
+    }
+    
+    &--lg {
+      padding: var(--layout-padding-md) var(--layout-padding-lg);
+      font-size: var(--font-size-content-body);
+      line-height: var(--font-line-height-content-body);
+      min-height: var(--layout-size-base);
+    }
+  }
+}

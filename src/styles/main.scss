@@ -1,0 +1,119 @@
+// Import des variables Figma dans l'ordre logique
+// 1. Root tokens (valeurs primitives)
+@import './root-tokens';
+
+// 2. Semantic tokens (tokens sémantiques)
+@import './semantic-tokens';
+
+// Styles globaux utilisant les variables sémantiques
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-content);
+  line-height: var(--font-line-height-content-body);
+  color: var(--text-base-strong);
+  background-color: var(--background-base);
+  font-size: var(--font-size-content-body);
+  letter-spacing: var(--font-letter-spacing-content);
+  font-weight: var(--font-weight-regular);
+}
+
+// Styles de l'App utilisant les nouvelles variables
+.app {
+  min-height: 100vh;
+  
+  &-header {
+    background: var(--background-elevated);
+    padding: var(--layout-padding-4xl);
+    text-align: center;
+    border-bottom: 1px solid var(--border-divider);
+    
+    h1 {
+      color: var(--text-brand-moderate);
+      margin-bottom: var(--layout-gap-md);
+      font-size: var(--font-size-heading-display);
+      font-weight: var(--font-weight-bold);
+      line-height: var(--font-line-height-heading-display);
+      letter-spacing: var(--font-letter-spacing-heading);
+      font-family: var(--font-family-heading);
+    }
+    
+    p {
+      color: var(--text-base-moderate);
+      font-size: var(--font-size-content-feature);
+      line-height: var(--font-line-height-content-feature);
+      font-weight: var(--font-weight-regular);
+    }
+  }
+  
+  &-main {
+    padding: var(--layout-padding-5xl);
+    
+    .design-system-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      
+      h2 {
+        color: var(--text-base-strong);
+        margin-bottom: var(--layout-gap-lg);
+        font-size: var(--font-size-heading-large);
+        font-weight: var(--font-weight-bold);
+        line-height: var(--font-line-height-heading-large);
+        letter-spacing: var(--font-letter-spacing-heading);
+        font-family: var(--font-family-heading);
+      }
+      
+      p {
+        color: var(--text-base-moderate);
+        font-size: var(--font-size-content-body);
+        line-height: var(--font-line-height-content-highlight);
+        margin-bottom: var(--layout-gap-3xl);
+        font-weight: var(--font-weight-regular);
+      }
+      
+      .component-showcase {
+        h3 {
+          color: var(--text-base-strong);
+          font-size: var(--font-size-heading-medium);
+          font-weight: var(--font-weight-bold);
+          line-height: var(--font-line-height-heading-medium);
+          margin: var(--layout-gap-3xl) 0 var(--layout-gap-lg) 0;
+          padding-bottom: var(--layout-gap-md);
+          border-bottom: 1px solid var(--border-divider);
+          letter-spacing: var(--font-letter-spacing-heading);
+          font-family: var(--font-family-heading);
+        }
+        
+        .button-group {
+          display: flex;
+          gap: var(--layout-gap-lg);
+          margin-bottom: var(--layout-gap-3xl);
+          flex-wrap: wrap;
+          align-items: center;
+          
+          &--full-width {
+            .lyse-button {
+              max-width: 400px;
+            }
+          }
+        }
+        
+        .card-group {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          gap: var(--layout-gap-xl);
+          margin-bottom: var(--layout-gap-3xl);
+          
+          @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: var(--layout-gap-lg);
+          }
+        }
+      }
+    }
+  }
+}
