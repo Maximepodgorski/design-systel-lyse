@@ -1,72 +1,123 @@
-# Design System Figma - React
+# 🎨 Design System Figma - React
 
-Projet React pour créer des composants de design system synchronisés avec Figma via le MCP (Multi-platform Component).
+Un système de design React moderne synchronisé avec Figma via MCP (Multi-platform Component).
 
-## 🚀 **Structure du Projet**
+## ✨ **Fonctionnalités**
+
+- 🎨 **Composants React** : Button, ActionCard et plus à venir
+- 🎯 **Variables SCSS** : Système de design tokens primitifs et sémantiques
+- 🔗 **Intégration Figma** : Synchronisation via MCP
+- 🚀 **Workflow moderne** : TypeScript, Vite, SCSS, tests
+- 🔄 **CI/CD** : GitHub Actions avec tests automatiques
+
+## 🚀 **Installation**
+
+```bash
+# Cloner le repository
+git clone https://github.com/Maximepodgorski/design-systel-lyse.git
+cd design-systel-lyse
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
+npm run dev
+```
+
+## 🛠️ **Scripts Disponibles**
+
+```bash
+npm run dev          # Serveur de développement
+npm run build        # Build de production
+npm run lint         # Vérification du code
+npm run format       # Formatage automatique
+npm run type-check   # Vérification TypeScript
+npm run test         # Exécution des tests
+```
+
+## 📁 **Structure du Projet**
 
 ```
 src/
 ├── components/          # Composants React
-│   └── Button/         # Composant Button (exemple)
-├── styles/             # Variables SCSS
-│   ├── _root-tokens.scss      # Variables primitives
-│   ├── _semantic-tokens.scss  # Variables sémantiques
+│   ├── Button/         # Composant Button
+│   └── ActionCard/     # Composant ActionCard
+├── styles/              # Variables SCSS
+│   ├── _root-tokens.scss      # Tokens primitifs
+│   ├── _semantic-tokens.scss  # Tokens sémantiques
 │   └── main.scss              # Styles principaux
-├── App.tsx             # Composant principal
-└── main.tsx            # Point d'entrée
+└── test/                # Configuration des tests
 ```
 
-## 🎨 **Architecture des Variables**
+## 🎨 **Composants Disponibles**
 
-### **Niveau 1 : Root Tokens** (`_root-tokens.scss`)
-- **Couleurs** : Valeurs hexadécimales brutes
-- **Typographie** : Familles, tailles, hauteurs de ligne, espacements
-- **Espacements** : Système de spacing cohérent
-- **Bordures** : Largeurs et rayons
-- **Ombres** : Valeurs de position et de flou
-- **Grid** : Colonnes et gouttières
+### **Button**
+Composant bouton avec multiples variantes, tailles et états.
 
-### **Niveau 2 : Semantic Tokens** (`_semantic-tokens.scss`)
-- **Backgrounds** : Contexte d'usage (base, brand, danger, success, warning)
-- **Borders** : Bordures sémantiques
-- **Icons** : Couleurs d'icônes par contexte
-- **Links** : États des liens
-- **Shadows** : Ombres par contexte
-- **Text** : Couleurs de texte par contexte
-- **Layout** : Variables de mise en page
-- **Typography** : Variables typographiques sémantiques
+```tsx
+import Button from './components/Button/Button';
 
-## 🛠️ **Installation**
-
-```bash
-npm install
+<Button variant="primary" size="md">
+  Cliquez-moi
+</Button>
 ```
 
-## 🚀 **Développement**
+### **ActionCard**
+Carte d'action avec titre, description et bouton.
 
-```bash
-npm run dev
+```tsx
+import ActionCard from './components/ActionCard/ActionCard';
+
+<ActionCard
+  title="Titre"
+  description="Description"
+  buttonText="Action"
+  buttonVariant="primary"
+/>
 ```
 
-## 🏗️ **Build**
+## 🔧 **Configuration**
 
-```bash
-npm run build
-```
+### **Variables SCSS**
+Le projet utilise un système de variables en 2 niveaux :
+- **Root tokens** : Valeurs primitives (couleurs, espacements, etc.)
+- **Semantic tokens** : Variables contextuelles utilisant les primitives
 
-## 🔗 **Intégration Figma MCP**
+### **Workflow de Développement**
+- **GitHub** : Versioning et collaboration
+- **Linear** : Gestion des tâches (à configurer)
+- **Cursor** : Développement avec intégration Linear
+- **CI/CD** : Tests et déploiement automatiques
 
-Le projet est configuré pour utiliser le MCP Figma pour :
-- Récupérer les variables directement depuis Figma
-- Synchroniser les composants avec les designs
-- Maintenir la cohérence entre design et code
+## 📚 **Documentation**
 
-## 📝 **Prochaines Étapes**
+- **Workflow de développement** : `DEVELOPMENT_WORKFLOW.md`
+- **Configuration des secrets** : `.github/SECRETS_SETUP.md`
+- **Protection des branches** : `.github/branch-protection.md`
+- **Résolution des problèmes CI** : `CI_TROUBLESHOOTING.md`
 
-1. **Synchronisation MCP** : Connexion avec Figma
-2. **Création de composants** : À partir des designs Figma
-3. **Tests et validation** : Vérification de la cohérence
+## 🚨 **Statut CI/CD**
+
+✅ **Problème CI résolu !** Le workflow GitHub Actions fonctionne maintenant correctement.
+
+- **Tests automatiques** : ✅ Actifs
+- **Linting automatique** : ✅ Actif  
+- **Build automatique** : ✅ Actif
+- **Déploiement Vercel** : ⏳ En attente de configuration
+
+## 🤝 **Contribution**
+
+1. Créer une branche feature : `git checkout -b feature/nom-composant`
+2. Développer et tester localement
+3. Commiter avec les conventions : `git commit -m "feat(components): add new component"`
+4. Créer une Pull Request sur GitHub
+
+## 📄 **Licence**
+
+Ce projet est sous licence MIT.
 
 ---
 
-**Prêt pour l'intégration MCP Figma !** 🎯
+**🎯 Prêt pour développer des composants de design system !** 🚀
+
+> 💡 **Note** : Le problème CI/CD a été résolu en simplifiant le workflow GitHub Actions. Voir `CI_TROUBLESHOOTING.md` pour plus de détails.
