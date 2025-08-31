@@ -1,0 +1,10 @@
+{
+  "apiUrl": "https://api.linear.app/graphql",
+  "apiKey": "YOUR_LINEAR_API_KEY",
+  "projectId": "YOUR_PROJECT_ID",
+  "teamId": "YOUR_TEAM_ID",
+  "timeout": 30000,
+  "retries": 2,
+  "cacheEnabled": true,
+  "maxIssuesPerQuery": 10
+}

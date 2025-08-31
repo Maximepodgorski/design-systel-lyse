@@ -1,0 +1,148 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design System/Introduction" />
+
+# 🎨 Design System Lyse
+
+Bienvenue dans le design system **Lyse** ! Ce système de design complet vous permet de créer des interfaces cohérentes et accessibles.
+
+## 🌟 Philosophie
+
+Notre design system est basé sur des **tokens sémantiques** qui garantissent :
+- **Cohérence** : Tous les composants utilisent les mêmes variables
+- **Maintenabilité** : Les modifications se propagent automatiquement
+- **Accessibilité** : Respect des standards WCAG
+- **Évolutivité** : Architecture modulaire et extensible
+
+## 🎯 Tokens Sémantiques
+
+Le système utilise une hiérarchie de tokens :
+
+### 1. Root Tokens (Primitifs)
+Variables de base définissant les valeurs fondamentales :
+- Couleurs primitives
+- Tailles de base
+- Polices système
+
+### 2. Semantic Tokens (Sémantiques)
+Variables contextuelles utilisant les tokens primitifs :
+- `--text-base-strong` : Texte principal
+- `--background-elevated` : Arrière-plan surélevé  
+- `--border-selected` : Bordure sélectionnée
+- `--button-primary-default` : Bouton primaire par défaut
+
+## 🧩 Composants Disponibles
+
+### Button
+Composant de bouton avec 6 variantes et 5 tailles.
+- **Variantes** : primary, secondary, danger, success, warning, neutral
+- **Tailles** : xs, sm, md, lg, xl
+- **États** : default, hover, pressed, disabled
+- **Fonctionnalités** : icônes, full-width, accessibilité
+
+### ActionCard
+Composant de carte avec action intégrée.
+- **Structure** : titre, description, bouton
+- **Responsive** : s'adapte aux grilles
+- **Personnalisable** : utilise toutes les variantes Button
+- **Récemment mis à jour** : nouveaux tokens de styling
+
+## 🎨 Variables SCSS Principales
+
+```scss
+// Texte
+--text-base-strong: couleur du texte principal
+--text-base-moderate: couleur du texte secondaire
+--text-brand-moderate: couleur du texte de marque
+
+// Arrière-plans
+--background-base: arrière-plan principal
+--background-elevated: arrière-plan surélevé
+--background-neutral-faint-hover: arrière-plan neutre faint au hover
+
+// Bordures
+--border-divider: bordure de séparation
+--border-selected: bordure sélectionnée
+--border-default: bordure par défaut
+
+// Espacements
+--layout-gap-*: espacement entre éléments
+--layout-padding-*: espacement interne
+```
+
+## 🚀 Utilisation
+
+### Import des Styles
+```scss
+@import './styles/main.scss';
+```
+
+### Utilisation des Composants
+```tsx
+import { Button, ActionCard } from './components';
+
+// Bouton simple
+<Button variant="primary" size="md">
+  Action
+</Button>
+
+// Action Card
+<ActionCard
+  title="Titre"
+  description="Description"
+  buttonText="Action"
+  buttonVariant="primary"
+/>
+```
+
+## 📱 Responsive Design
+
+Tous les composants sont conçus pour être responsive :
+- **Mobile First** : approche mobile d'abord
+- **Grilles Flexibles** : utilisation de CSS Grid et Flexbox
+- **Breakpoints** : points de rupture cohérents
+- **Touch Friendly** : zones de toucher optimisées
+
+## ♿ Accessibilité
+
+Conformité aux standards **WCAG 2.1 AA** :
+- **Contraste** : ratios de contraste suffisants
+- **Navigation** : support clavier complet
+- **Screen Readers** : structure sémantique
+- **Focus** : indicateurs de focus visibles
+- **Tests** : addon a11y intégré dans Storybook
+
+## 🔧 Développement
+
+### Structure des Composants
+```
+src/components/ComponentName/
+├── ComponentName.tsx      # Composant React
+├── ComponentName.scss     # Styles SCSS
+├── ComponentName.stories.tsx # Stories Storybook
+├── index.ts              # Export
+└── README.md            # Documentation
+```
+
+### Conventions de Nommage
+- **Classes CSS** : `lyse-component-name__element--modifier`
+- **Variables SCSS** : `--semantic-context-property`
+- **Props TypeScript** : interfaces explicites avec JSDoc
+
+## 📚 Documentation
+
+- **Storybook** : documentation interactive des composants
+- **README** : guide de démarrage et configuration
+- **Types** : documentation TypeScript complète
+- **Tests** : couverture avec Vitest et Testing Library
+
+## 🔄 Mises à Jour Récentes
+
+### ActionCard Component
+- ✅ Border Color : `border-default` → `border-selected`
+- ✅ Background : `background-neutral-faint-default` → `background-neutral-faint-hover`
+- 🎯 Amélioration de la hiérarchie visuelle
+
+---
+
+**Navigation** : Explorez les composants dans la section **Components** ou consultez les exemples dans **Examples**.
