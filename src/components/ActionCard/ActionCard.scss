@@ -3,8 +3,8 @@
 
 .lyse-action-card {
   // === STYLES DE BASE ===
-  background-color: var(--background-neutral-faint-default);
-  border: 1px solid var(--border-default);
+  background-color: var(--background-neutral-faint-hover);
+  border: 1px solid var(--border-selected);
   border-radius: var(--layout-radius-xl);
   padding: var(--layout-padding-lg);
   width: 100%;
@@ -91,7 +91,7 @@
     cursor: not-allowed;
     
     &:hover {
-      border-color: var(--border-default);
+      border-color: var(--border-selected);
       box-shadow: none;
     }
   }
