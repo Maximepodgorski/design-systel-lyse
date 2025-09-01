@@ -57,8 +57,8 @@ Le composant utilise le composant Button avec toutes ses variantes :
 
 Le composant utilise parfaitement les variables sémantiques Figma :
 
-- **Background** : `--background-elevated`
-- **Border** : `--border-divider`, `--border-neutral-medium`
+- **Background** : `--background-neutral-medium-default`
+- **Border** : `--border-selected`, `--border-neutral-medium`
 - **Typography** : `--font-family-content`, `--font-weight-accent`, `--font-weight-regular`
 - **Spacing** : `--layout-padding-lg`, `--layout-gap-lg`, `--layout-gap-xs`
 - **Radius** : `--layout-radius-xl`
